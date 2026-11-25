@@ -1,40 +1,837 @@
-MAI600 Course Notes (SAMPLE)
-NOTE: These are sample notes written for testing the chatbot. Replace this file with the official MAI600_Course_Notes.txt from Canvas when you have it.
+Section 1: General Information
 
-Week 1: What is Artificial Intelligence?
-Artificial Intelligence (AI) is the field of building computer systems that perform tasks that normally need human intelligence, such as understanding language, recognising images, making decisions and solving problems.
-Narrow AI is designed for one specific task (for example, a spam filter or a chess program). General AI would be able to perform any intellectual task a human can; it does not exist yet.
+1.1 Administrative details:
 
-Week 2: Machine Learning Basics
-Machine learning (ML) is a branch of AI where computers learn patterns from data instead of following hand-written rules.
-There are three main types of machine learning:
+| Associated HE awards | Duration | Level | Unit Coordinator | Unit Lecturer/tutor |
 
-1. Supervised learning
-Supervised learning trains a model on labeled data, meaning every training example comes with the correct answer (the label). The model learns to map inputs to outputs so it can predict labels for new, unseen data.
-Two common supervised tasks are:
-- Classification: predicting a category, e.g. whether an email is spam or not spam.
-- Regression: predicting a number, e.g. the price of a house.
-Common algorithms include linear regression, logistic regression, decision trees, and neural networks.
+| Master of Information Technology (Artificial Intelligence) | One eight-week study period (8 class sessions) | Second year | Roshanak Amini | Dr Mohammad Motahar |
+| | | (600 Level) | | |
+| | | AQF 9 | [email removed] | [email removed] |
 
-2. Unsupervised learning
-Unsupervised learning uses unlabeled data. The model looks for hidden structure on its own.
-Examples: clustering (grouping similar customers) and dimensionality reduction (simplifying data while keeping important information). A common algorithm is k-means clustering.
+1.2 Core or elective unit
 
-3. Reinforcement learning
-In reinforcement learning, an agent learns by interacting with an environment. It receives rewards for good actions and penalties for bad ones, and learns a strategy (policy) that maximises total reward. Examples include game-playing AI and robot control.
+☐ core unit
 
-Week 3: Training and Evaluating Models
-Data is usually split into a training set (to learn from) and a test set (to check performance on unseen data).
-Overfitting happens when a model memorises the training data and performs poorly on new data. Underfitting happens when a model is too simple to capture the pattern.
-Common evaluation metrics: accuracy, precision, recall and F1 score for classification; mean squared error for regression.
+☒ major unit
 
-Week 4: Neural Networks and Deep Learning
-A neural network is made of layers of connected nodes (neurons). Each connection has a weight that is adjusted during training using an algorithm called backpropagation.
-Deep learning uses neural networks with many layers and is behind modern image recognition and language models.
+☐ elective unit
 
-Week 5: Large Language Models and Chatbots
-Large language models (LLMs) are trained on huge amounts of text to predict the next word. They power chatbots such as the one built in this course.
-Retrieval-augmented generation (RAG) gives a chatbot access to specific documents so it answers from those documents instead of only its general training. This reduces hallucinations, which are confident but made-up answers.
+☐ Capstone
 
-Week 6: AI Ethics
-Key ethical issues include bias in training data, privacy, transparency (explaining how a model decides), and accountability for AI decisions.
+☐ WIL
+
+1.3 Unit weighting
+
+ Unit Credit Points Total Course Credit Points
+
+ 10 credit points Master of IT (Artificial Intelligence): 160 credit points
+
+Note: the term unit, as recognised by the Australian Qualifications Framework, refers to the assessable course elements for which grades are given towards achieving an award.
+
+1.4 Student workload
+
+As a student of this unit you are expected to maintain this workload, per week, for this unit:
+
+ No timetabled hours/week No. personal study hours/week Total workload hours/week
+
+ 4 15 19
+
+*Note that a full-time load for a student is two units per quarter. As noted above, timetabled hours per unit are four hours structured with fifteen hours of personal study per week, per unit.
+
+Students can attend English language support lessons in the form of two non-credit units, AES100 and AES101 for 2-hour lessons over eight weeks, if necessary.
+
+In addition, learning support assistance is available to all students for 20 minutes per session. It is documented in the Student Handbook, Student Support Framework and Student Support, Wellbeing and Health Policy and Procedure. Appointments must be made to use this service.
+
+1.5 Mode of delivery (tick all that apply)
+
+☒ Lecture/Tutorial
+
+☒ E-learning online
+
+☒ Blended
+
+☐ Work Integrated Learning (WIL)
+
+☐ Intensive/Fastrack delivery (please specify details below
+
+1.6 Work-integrated learning activities (if applicable)
+
+1.7 Student Workload
+
+Using the table below, indicate the expected student workload per week for this unit.
+
+ Number of timetabled hours per week Number of personal study hours per week Total workload hours per week
+
+ 4 hours workshop (Face to face) 15 19
+
+ 2 hours workshop (Online) 14 16
+
+In the case of less than ten (10) students the following will apply:
+
+ Number of timetabled hours per week Number of personal study hours per week Total workload hours per week
+
+ 3 hours workshop (Face to face) 15 18
+
+ 2 hours workshop (Online) 14 16
+
+Note: Online delivery is not affected by the number of students.
+
+Note that online materials are used wherever possible to supplement class-based learning and to maximise opportunities for students to engage in formative assessments, forums, group activities and case study analyses.
+
+It is your responsibility as a student to check the unit materials online regularly.
+
+1.8 Prerequisites and co-requisites
+
+Are students required to have undertaken a prerequisite or co-requisite unit for this unit?
+
+☐Yes ☒ No
+
+If “Yes”, please specify below:
+
+1.9 Other resource requirements
+
+As a student you are expected to have a computer with reliable internet access for this unit.
+
+Section 2 - Academic Details
+
+2.1 Overview of this unit
+
+This unit on Advanced Machine and Deep Learning Applications provides students with a comprehensive exploration of cutting-edge techniques and methodologies that are driving innovation across various domains. Beginning with an overview of advanced machine learning concepts, students recap foundational algorithms before delving into the powerful realm of deep learning and neural networks. They gain insights into the pivotal role these advanced methods play in modern applications, from computer vision and natural language processing to generative models and reinforcement learning.
+
+Students will learn about feedforward neural networks, convolutional neural networks (CNNs) for computer vision tasks, recurrent neural networks (RNNs) for sequential data, generative models like variational autoencoders (VAEs) and generative adversarial networks (GANs), and attention mechanisms and transformers for sequence-to-sequence modelling. The unit further covers advanced topics such as reinforcement learning, transfer learning, meta-learning, and interpretability in AI. Through group projects and case studies spanning diverse domains, students gain hands-on experience in applying these advanced techniques to real-world challenges, reinforcing theoretical concepts with practical applications and preparing them to excel as machine learning experts.
+
+2.2 Graduate attributes
+
+Each unit contributes in some way to the development of Graduate Attributes, which students should be able to demonstrate upon completion of their course. ASA Institute of Higher Education's key generic graduate attributes for a Masters level degree are summarised below.
+
+| Graduate Attribute and Descriptor |
+
+| 1. Discipline Knowledge |
+| |
+| Ability to demonstrate an extensive specialist knowledge of a field of study and defined professional skills ensuring work readiness. |
+
+| 2. Analytical Thinking and Complex Problem-solving |
+| |
+| Ability to effectively identify, evaluate and solve problems by thinking critically and creatively in a structured and methodical way. |
+
+| 3. Digital Literacy |
+| |
+| Ability to navigate and use a variety of online platforms and digital tools to support them in their study, professional practice and/or for further learning. |
+
+| 4. Communication |
+| |
+| Ability to communicate using speaking, listening, reading, writing, numeracy, and IT related skills to communicate effectively in a variety of contexts, including digital settings. |
+
+| 5. Lifelong Learning |
+| |
+| Ability to be self-motivated and confident individual to identify, plan and manage their future in continuous learning, learning transferable and time management skills and an ability to learn independently. |
+
+| 6. Professional Skills |
+| |
+| Ability to apply knowledge and skills to sound, unbiased decision-making, evaluate data, comply with law and regulations, and demonstrate initiative, judgement, personal and professional integrity. |
+
+| 7. Intercultural and Ethical Sensitivity |
+| |
+| Ability to acknowledge and respect equality of opportunity, individual and social responsibility and recognition and appreciation of other cultures and times recognising the global context of business. Awareness, sensitivity, and commitment to ethics and ethical standards in personal, social, business, and professional contexts. |
+
+| 8. Teamwork, Collaboration and Leadership |
+| |
+| Ability to work effectively with people of different backgrounds, identifying and recognising strengths and limitations, demonstrating leadership, coaching, mentoring and motivating others, and collaborating and contributing to team results. |
+
+NOTE: Graduate Attributes are aligned with AQF Course Levels
+
+Master (AQF Level 9) - Specialised - Graduates at this level will have specialised knowledge and skills for research, and/or professional practice and/or further learning;
+
+Graduate Diploma (AQF Level 8) - Advanced - Graduates at this level will have advanced knowledge and skills for professional/ highly skilled work and/or further learning; and
+
+Graduate Certificate (AQF Level 8) - Coherent - Graduates at this level will have broad and coherent knowledge and skills for professional work and/or further learning.
+
+2.3 Course learning outcomes
+
+Each unit in the course contributes to the Course Learning Outcomes (CLOs), which students should be able to demonstrate upon completion of the course. The graduates of the relevant course should be able to:
+
+| No. | Course Learning Outcomes (CLOs) |
+| | |
+| | Master (AQF Level 9) |
+
+| 1 | Integrate specialist knowledge to explicate the principles and limitations of Artificial Intelligence; |
+
+| 2 | Examine and creatively solve complex business problems using Artificial Intelligence methods and technologies; |
+
+| 3 | Analyse and evaluate applications of Artificial Intelligence in various domains of knowledge and practice; |
+
+| 4 | Critically evaluate the sustainability of Artificial Intelligence solutions in an industry context; |
+
+| 5 | Collaborate and communicate with others in a professional setting in a variety of modes, including verbally and in writing. |
+
+| 6 | Critically reflect on the ethical, legal and socioeconomic implications of Artificial Intelligence. |
+
+| 7 | Research and formulate complex information about Artificial Intelligence concepts and projects to specialist and non-specialist audiences. |
+
+2.4 Unit learning outcomes
+
+On successful completion of this Unit, students will be able to:
+
+| Unit Learning Outcomes | Assessment tasks in which this learning outcome is assessed | Contribution to an alignment with CLOs | Contribution to and alignment with GAs |
+
+| 1. Evaluate and select appropriate deep learning architectures and techniques to address complex real-world problems. | A1 | CLO 2 | GA 1 |
+
+| | A2 | | GA 2 |
+
+| | A3 | | GA 3 |
+
+| | A4 | | GA 6 |
+
+| | | | GA 7 |
+
+| | | | GA 8 |
+
+| 2. Implement, train, and optimise state-of-the-art deep learning models using industry tools and applying advanced techniques. | A1 | CLO 2 | GA 1 |
+
+| | A3 | CLO 3 | GA 2 |
+
+| | | | GA 3 |
+
+| | | | GA 6 |
+
+| | | | GA 7 |
+
+| 3. Analyse and interpret deep learning model behaviour, using interpretability, explainability, and uncertainty quantification techniques, addressing ethical considerations and biases. | A1 | CLO 2 | GA 1 |
+
+| | A2 | CLO 3 | GA 2 |
+
+| | A3 | CLO 7 | GA 3 |
+
+| | | | GA 4 |
+
+| | | | GA 6 |
+
+| 4. Critically evaluate cutting-edge research in machine learning and deep learning, and apply findings to develop innovative solutions or contribute to advancing the field. | A1 | CLO 2 | GA 1 |
+
+| | A3 | CLO 3 | GA 2 |
+
+| | A4 | CLO 7 | GA 3 |
+
+| | | | GA 4 |
+
+| | | | GA 6 |
+
+| | | | GA 8 |
+
+| 5. Effectively communicate complex machine learning and deep learning concepts, methodologies, and research findings through technical reports, presentations, and visualisations to support decision-making and knowledge dissemination. | A1 | CLO 2 | GA 1 |
+
+| | A2 | CLO 5 | GA 2 |
+
+| | A3 | | GA 3 |
+
+| | A4 | | GA 4 |
+
+| | | | GA 6 |
+
+| | | | GA 8 |
+
+2.5 Unit content and structure
+
+| Study Period | Topics included in the unit | Assessment activity and other related items |
+
+| 1 | Introduction to Advanced Machine Learning | |
+
+| | - Overview of advanced machine learning concepts | |
+
+| | - Recap of foundational machine learning algorithms | |
+
+| | - Introduction to deep learning and neural networks | |
+
+| | - Understanding the role of advanced machine learning in modern applications | |
+
+| 2 | Feedforward Neural Networks | A1: Applied ML/DL Activities (progressive group activity) |
+
+| | - Multilayer perceptrons and universal approximation theorem | |
+
+| | - Activation functions and weight initialisation | |
+
+| | - Backpropagation algorithm and gradient descent optimisation | |
+
+| 3 | Convolutional Neural Networks (CNNs) | Flash Card Presentation (formative activity) |
+
+| | - Convolutional and pooling layers | |
+
+| | - CNN architectures (LeNet, AlexNet, VGGNet, ResNet, etc.) | |
+
+| | - Applications in computer vision (image classification, object detection, segmentation) | |
+
+| 4 | Recurrent Neural Networks (RNNs) | A1: Applied ML/DL Activities (progressive group activity) |
+
+| | - Recurrent neural network architectures | |
+
+| | - Long Short-Term Memory (LSTM) and Gated Recurrent Unit (GRU) | |
+
+| | - Applications in natural language processing and time series analysis | |
+
+| 5 | Generative Models | Flash Card Presentation (formative activity) |
+
+| | - Variational Autoencoders (VAEs) | |
+
+| | - Generative Adversarial Networks (GANs) | |
+
+| | - Applications in image generation and data augmentation | |
+
+| 6 | Attention Mechanisms and Transformers | A1: Applied ML/DL Activities (progressive group activity) |
+| | | A3: Deep Learning Project + Individual Reflection due |
+| | - Attention in sequence-to-sequence models | |
+
+| | - Transformer architecture and self-attention | |
+
+| | - Applications in natural language processing (translation, language modelling) | |
+
+| 7 | Advanced Topics | A2: Individual Knowledge Quiz |
+
+| | - Reinforcement learning (Deep Q-Networks, policy gradient methods) | |
+
+| | - Transfer learning and meta-learning | |
+
+| | - Interpretability and explainable AI | |
+
+| 8 | Project Presentations and Revision | A1: Applied ML/DL Activities - final activity |
+| | | A4: Individual Reflection on Professional Practice |
+
+2.6 Teaching methods
+
+This unit will be delivered on campus and online over 4 hours per week. Where appropriate, assessments will be submitted to Turnitin for authentication checking. The 4R/5R reflective framework (Report, Respond, Relate, Reason, Reconstruct) will be explicitly taught and modelled before reflective assessments. Students will be guided to move beyond description by critically evaluating their contribution, learning, teamwork, challenges, alternative approaches and future professional application, supported by relevant academic literature where required. A1 is progressive across Sessions 2, 4, 6 and 8, with separate Canvas evidence/submission points and formative feedback provided during the teaching period.
+
+ Methodology Student Workload
+
+ Classroom face-to-face is complimented with Zoom recordings and augmented online resources as appropriate to the content and teaching methods of the subject area. 32
+
+ Assessment (including research and preparation) and Reading 120
+
+ Total student workload 152
+
+2.7 Student assessment details
+
+As we integrate artificial intelligence (AI) into our educational processes, it is crucial for students to follow AI guidelines that focus on nurturing critical thinking. While AI is a valuable tool during assessments, it is equally important for students to use their cognitive abilities when analysing information and presenting it with their unique perspectives.
+
+ Assessment number & type Assessment description Assessed and date due Weighting ULOs to be assessed
+
+ A1: Applied ML/DL Activities + Reflective Learning Journal Groups of 3 complete applied ML/DL activities in Sessions 2, 4, 6 and 8. Each student also submits an individual 4R/5R reflective journal entry (250 words ±10% after each activity) on their own contribution, learning and application. Progressive feedback is provided during the teaching period. Sessions 2, 4, 6 & 8 30% ULO 1
+ Group: 10% ULO 2
+ Individual: 20% ULO 3
+ ULO 4
+ ULO 5
+
+ A2: Individual Knowledge Quiz 20-question individual multiple-choice quiz assessing machine- and deep-learning content covered in Sessions 1-6. Session 7 20% ULO 1
+ ULO 3
+ ULO 5
+
+ A3: Applied Deep Learning Project + Individual Reflection Groups of 3 design, implement and critically evaluate a deep-learning solution and submit a 3,000-word (±10%) group report. Each student submits an 800-word (±10%) individual 4R/5R critical reflection on contribution, learning, collaboration, challenges, alternative approaches and future application. Week 6, Thursday 11:59pm 40% ULO 1
+ Group: 25% ULO 2
+ Individual: 15% ULO 3
+ ULO 4
+ ULO 5
+
+ A4: Individual Reflection on Professional Practice An 800-word (±10%) individual 4R/5R critical reflection on learning across the unit and its application to professional machine/deep-learning engineering practice, including challenges, learning, alternative approaches and future professional application. Week 8, Thursday 11:59pm 10% ULO 1
+ ULO 4
+ ULO 5
+
+References requirement (all research-based assessments): at least 60% of references must be sourced through the ASA ProQuest database and include DOI links (or a stable ProQuest link where no DOI exists). General websites are not accepted as academic sources. Referencing style: APA 7.
+
+2.7.1 AI guidelines for assessments
+
+| Rules | AI Guidelines |
+
+| 1 | Understand the Role of AI: |
+| | |
+| | - AI tools are designed to aid your learning, not replace your own thinking. |
+| | |
+| | - While AI can provide information and suggestions, remember that it is your duty to critically and creatively apply this information. |
+
+| 2 | Avoid Copy-Pasting: |
+| | |
+| | - Do not simply copy AI-generated content into your assignments or projects. |
+| | |
+| | - Instead, use AI content as a reference or starting point for your own work. |
+
+| 3 | Analyse and Interpret: |
+| | |
+| | - Take the time to analyse and interpret the information from AI in your own words. |
+| | |
+| | - Engage in critical thinking to assess the quality and relevance of AI-generated content. |
+
+| 4 | Cite AI Sources: |
+| | |
+| | - When using AI-generated content as a reference, always cite the AI tool as a source in your work. |
+| | |
+| | - Follow your institute's guidelines for proper referencing. |
+
+| 5 | Seek Human Feedback: |
+| | |
+| | - While AI can enhance your learning, never underestimate the value of human feedback and guidance. |
+| | |
+| | - Collaborate with educators to resolve doubts and enrich your understanding. |
+
+| 6 | Use AI Responsibly: |
+| | |
+| | - Be conscious of ethical considerations, including copyright and plagiarism, when using AI. |
+| | |
+| | - Refrain from using AI to complete assignments or exams inappropriately. |
+
+| 7 | Think Independently: |
+| | |
+| | - Champion independent thinking and problem-solving as essential skills. |
+| | |
+| | - Do not rely solely on AI tools for answers; use them as learning aids. |
+
+| 8 | Protect Your Data Privacy: |
+| | |
+| | - When using AI tools, prioritise data privacy and follow recommended practices to secure your personal information. |
+
+| 9 | Report Issues or Concerns: |
+| | |
+| | - If you encounter problems or have concerns about AI tool use, promptly report them to your institution for resolution. |
+
+Academic Integrity and AI Use: Generative AI may only be used where permitted by the assessment requirements. Any permitted use of AI must be appropriately acknowledged in accordance with ASA requirements. Unauthorised or unacknowledged use of AI may constitute a breach of academic integrity and will be managed in accordance with ASA’s Academic Integrity Policy and Academic Misconduct Procedure.
+
+NOTE:
+
+Group Assessment
+
+All group assessments are marked in accordance with the student group working guide at the ASA Institute of Higher Education.
+
+Pass requirements
+
+Students must achieve at least 50% of the total marks for the unit of study to pass the unit.
+
+If a student fails any individual piece of assessment, they will be eligible to continue in the unit. You can view assessment briefings on Canvas in the assessment section.
+
+2.8 Prescribed and recommended readings
+
+| Prescribed textbook: | Subramanian, V., 2025. Applied Machine Learning for Data Science Practitioners. Wiley. |
+
+| Recommended textbooks: | Aurélien Géron 2022, Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 3rd Edition, O’Reilly. |
+| | |
+| | Ian Goodfellow, Yoshua Bengio and Aaron Courville 2016, Deep Learning, MIT Press |
+| | |
+| | Jeon, Gwanggil (Ed.) 2023, Advanced Machine Learning and Deep Learning Approaches for Remote Sensing, MDPI. |
+
+| Reference journals and journal articles: | IEEE Transactions on Neural Networks and Learning Systems: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5962385 |
+| | Topics: Neural networks, deep learning architectures, optimization algorithms, and applications across various domains, with a focus on both theoretical foundations and practical implementations. |
+| | |
+| | IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI): https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34 |
+| | |
+| | Topics: Cutting-edge research in machine learning, artificial intelligence, deep learning, and their real-world applications, bridging the gap between theory and practice. |
+| | |
+| | Nature Machine Intelligence: https://www.nature.com/natmachintell/ |
+| | |
+| | Topics: Cutting-edge research in machine learning, artificial intelligence, deep learning, and their real-world applications, bridging the gap between theory and practice. |
+| | |
+| | ACM Transactions on Intelligent Systems and Technology (TIST): https://dl.acm.org/journal/tist |
+| | |
+| | Topics: Theoretical and applied research on neural networks, deep learning, and computational intelligence, including architectures, training algorithms, applications in pattern recognition, robotics, and data analysis. |
+| | |
+| | Journal of Machine Learning Research (JMLR): https://www.jmlr.org/ |
+| | |
+| | Topics: Computer vision, pattern recognition, deep learning for image and signal processing, machine learning algorithms, and their applications in various domains. |
+| | |
+| | Science Direct Neurocomputing: |
+| | |
+| | https://www.sciencedirect.com/journal/neurocomputing/ |
+| | |
+| | Topics: Neural networks, machine learning, artificial intelligence, and related areas, including applications and theoretical developments. |
+
+| Reference websites: | Machine Learning Mastery (by Jason Brownlee): https://machinelearningmastery.com/ |
+| | |
+| | KDnuggets: https://www.kdnuggets.com/ |
+| | |
+| | Towards Data Science (by Towards AI): https://towardsdatascience.com/ |
+
+| Additional facilities, equipment, software and other resources (if applicable): | Scikit Learn, Tensor Flow, Keras, Python, Jupyter Notebook |
+
+2.9 Overall assessment grading schedule for the unit
+
+| Grade | Definition |
+
+| High Distinction | Complete and comprehensive understanding of the unit content; development of relevant skills to an outstanding level; demonstration of an extremely high level of interpretive and analytical ability and intellectual initiative; and excellent achievement of all major and minor objectives of the unit. |
+| | |
+| HD | |
+| | |
+| Mark range: 85% and above | |
+
+| Distinction | Very high level of understanding of the unit content; development of relevant skills to a very high level; demonstration of a very high level of interpretive and analytical ability and intellectual initiative; and comprehensive achievement of all major and minor objectives of the unit. |
+| | |
+| D | |
+| | |
+| Mark range: 75 – 84.9% | |
+
+| Credit | High level of understanding of the unit content; development of relevant skills to a high level; demonstration of a high level of interpretive and analytical ability and achievement of all major objectives of the unit; some minor objectives not fully achieved. |
+| | |
+| C | |
+| | |
+| Mark range: 65 – 74.9% | |
+
+| Pass | Adequate understanding of most of the basic unit content; development of relevant skills to a satisfactory level; adequate interpretive and analytical ability and achievement of all major objectives of the unit; some minor objectives not achieved. |
+| | |
+| P | |
+| | |
+| Mark range: 50 – 64.9% | |
+
+| Non-graded Pass | Successful completion of a unit assessed on a pass/fail basis, indicating satisfactory understanding of unit content; satisfactory development of relevant skills; satisfactory interpretive and analytical ability in all major objectives of the unit. |
+| | |
+| NGP | |
+
+| Fail | Inadequate understanding of basic unit content; failure to develop relevant skills; insufficient evidence of interpretive and analytical ability; and failure to achieve some or all major and minor objectives of the unit. |
+| | |
+| F | |
+| | |
+| Mark range: below 50% | |
+
+| Fail – not all assessments submitted | Did not complete all summative assessment tasks. |
+| | |
+| FNS | |
+
+| Grade Pending | A final grade is yet to be awarded for the unit. This is a temporary grade only and must be finalised before the end of the following quarter. |
+| | |
+| GP | |
+
+| Supplementary | A final grade is yet to be awarded for this unit as a supplementary assessment has been approved. This is a temporary grade only and must be finalised before the end of the following quarter. |
+| | |
+| SX | |
+| | |
+| Mark range: 45 – 49.9% | |
+
+| Withdraw With Failure | Cancelled enrolment in the unit after the final date for withdrawal without failure. |
+| | |
+| WF | Cancelled enrolment in the unit for non-payment of fees. |
+
+| Withdraw Without Failure | Cancelled enrolment in the unit before the final date for withdrawal without failure. This grade may also be awarded to students who withdraw from a unit after the withdrawal date under special or compassionate circumstances. In these cases, the grade is awarded at the discretion of the Academic Board. |
+| | |
+| AW | A unit with the grade of AW does not appear on a student’s academic transcript. |
+
+| Advanced Standing | Credit has been granted for the unit following an application and approval for Advanced Standing. |
+| | |
+| AS | |
+
+2.10 Additional information
+
+Policies and forms
+
+If a student is looking for additional information, they can go to the Student Handbook or the policies and procedures that are located on the website www.asahe.edu.au.
+
+Academic integrity and referencing
+
+Maintaining high standards of academic integrity requires that students have access to guidance and support on how to access and cite information correctly. ASA has developed academic integrity induction materials for online access by staff and students, with resources on appropriate academic writing skills and referencing. Students are encouraged to practice academic integrity and any breaches will not be tolerated including plagiarism, collusion, contract cheating, and overuse of AI without referencing.
+
+Academic integrity means upholding high ethical standards of academic conduct. Plagiarism means the unattributed use of another writer's words, ideas and arguments as one's own. Instances of plagiarism and other forms of academic misconduct will be addressed within the framework of ASA's Policy and Procedure covering the topic of Academic Integrity.
+
+All ASA students are expected to complete an online Academic Integrity Module prior to starting their first study period. Students are expected to receive a result of 100% in the module. Students will have as many attempts as possible to receive this result. The Academic Integrity Module will be accessible to all students throughout their studies with ASA if they wish to go back and to refresh their understanding or check on rules and regulations.
+
+Some students against whom allegations of academic misconduct are brought often say that they did not know or understand the meaning of misconduct or that if they did know and understand that they were simply careless or under pressure. ASA expects students to be confident that they know and understand the ASA's definition of Student Misconduct and are aware of the penalties if allegations of misconduct are proven.
+
+Allegations of student misconduct are taken seriously by ASA and if proven, can lead to penalties that may depend on whether a student is a first, second- or third-time offender. It is the responsibility of the student to read and understand the policies relevant to Academic Integrity and the consequences for breaching those policies. If in doubt, it is better to ask if the students are confused and check with your unit coordinator and or lecturer.
+
+Students must attach an assessment cover sheet to all submitted assessments, with a signed declaration of originality.
+
+The American Psychological Association (APA 7th ed.) referencing style is used throughout this course.
+
+Special Consideration and late submissions
+
+Assessment items submitted after the assessment due date without an approved extension for mitigating circumstances may be penalised. The standard penalty is the reduction of the mark allocated to the assessment item by 5% of the total mark applicable for the assessment item for the first working day or part working day, and then 10% for each working day or part working day that the item is late (a 'working day' for this purpose is defined as any day on which institute administration is open). Assessment items submitted more than ten working days after the assessment due date is awarded zero marks.
+
+Students may apply for special consideration for an assessment using the Special Consideration Request Form if they experience sickness or other circumstances outside their control that adversely affect their ability to study. The decision shall be at the discretion of the Dean and will be granted in writing.
+
+Student support services
+
+The Academic Team deliver academic and learning support workshops to students. For example, the following academic and learning support workshops (Academic Skills Workshops) were delivered to students in each trimester:
+
+a) Finding Credible Sources Online, Writing Assessments, Avoiding Plagiarism and Apply Referencing in Assessments
+
+b) Preparing for Exams: ASA revision for success
+
+c) Work effectively in Groups and Create and Deliver Confident and Compelling Presentations and
+
+d) Preparing for Exams at ASA: dealing with stress and revision for success.
+
+Students also learn the abovementioned skills during BUS100 Business Communication where all undergraduate students are timetabled and students are able to attend further tutorials if they wish, by asking the lecturer if they can join the class.
+
+ASA facilitates a Peer-to-Peer Mentoring Program, which connects Students at Risk, or students who require extra support in a particular unit of study, with other students who have achieved Distinction or higher grades. These high performing students are trained by ASA and provide Students at Risk, or students who require extra support in a particular unit of study, with mentoring for one hour per week during the trimester.
+
+In accordance with section 238-10 of the Higher Education Support Act 2003, and Higher Education Provider Amendment (Support for Students Policy) Guidelines 2024 ASA have updated all relevant policies the that cover the range of support available to students to ensure the health, safety and wellbeing of all ASA’s students. Please refer to the following policies and procedures via the ASA website:
+
+- Student Support Framework;
+
+- Student Grievance Policy and related procedure;
+
+- Deferral, Suspension, and Cancellation Policy and Procedure;
+
+- Privacy Policy;
+
+- Aboriginal and Torres Strait Islander Participation Policy and Procedure;
+
+- Student Fees, Charges and Refund Policy and related procedure;
+
+- Student Support, Wellbeing and Health Policy and Procedure;
+
+- Sexual Assault and Sexual Harassment Policy and Procedure;
+
+- Student Assessment Policy and related procedure;
+
+- Student Progression and At Risk Policy and related procedure;
+
+- Diversity and Equity Policy and Procedure;
+
+- Reasonable Adjustment Policy and Procedure;
+
+- Student Enrolment and Attendance Policy and Procedure;
+
+- Student Code of Conduct;
+
+- Mental Health Framework;
+
+- Discrimination, Bullying and Harassment Policy and Procedure;
+
+- Special Consideration Policy and Procedure;
+
+- Student Orientation Policy and Procedure;
+
+- Student Admissions Policy and related procedure;
+
+- Academic Integrity Policy;
+
+- Academic Misconduct Procedure;
+
+- Information Technology Policy and Procedure;
+
+- Learning Resources Policy and Procedure; and
+
+- Critical Incident Policy and related procedure (supplied).
+
+ASA ensures students have access to the support services. The following services are provided:
+
+Students may contact their lecturers to discuss academic or operational matters and seeking assistance about their units' contents.
+
+The Academic Learning Support Officer is also available by appointment to provide general learning and academic support, including time management issues, setting, and achieving learning goals, ways of learning and managing assessment tasks, as well as the English and academic skills. Students are informed about these points of contact at the Student Services Presentation during orientation and in the Orientation Reference Guide.
+
+Students who have been identified as At Risk, meet with the Academic Dean, and are put on a learning contract and provided with additional support.
+
+Students can meet with the ASA Wellbeing Officer for wellbeing, safety and mental health support. Students who require higher level mental health support are provided with information and referred to an external Counselling Clinic to help provide mental health support.
+
+In the event of any technical issues with access to learning resources including Canvas, emails, textbooks or specialist resources, students are informed they can contact the following staff:
+
+a) Lecturers
+
+b) Unit coordinator
+
+c) Student Services Staff
+
+d) Student Learning Support Officer
+
+e) IT Support.
+
+| Unit | MAI600 Advanced Machine and Deep Learning Applications | |
+
+| Assessment Type | Applied ML/DL Activities + Reflective Learning Journal | |
+
+| Assessment Number | 1 | |
+
+| Assessment Weighting | 30% total - Group activities 10% + Individual reflective journal 20% | |
+
+| Alignment with Unit and Course | Unit Learning Outcomes | Graduate Attributes Assessed |
+
+| Alignment with Unit and Course | ULO 1: Evaluate and select appropriate deep learning architectures and techniques to address complex real-world problems. | GA 1: Discipline Knowledge |
+
+| | ULO 2: Implement, train and optimise state-of-the-art deep learning models using industry tools and advanced techniques. | GA 2: Analytical Thinking and Complex Problem-solving |
+
+| | ULO 3: Analyse and interpret deep learning model behaviour using interpretability, explainability and uncertainty techniques, addressing ethics and bias. | GA 3: Digital Literacy |
+
+| | ULO 4: Critically evaluate cutting-edge ML/DL research and apply findings to develop innovative solutions. | GA 4: Communication |
+
+| | ULO 5: Effectively communicate complex ML/DL concepts, methods and findings through reports, presentations and visualisations. | GA 5: Lifelong Learning |
+
+| | | GA 6: Professional Skills |
+
+| | | GA 7: Intercultural and Ethical Sensitivity |
+
+| | | GA 8: Teamwork, Collaboration and Leadership |
+
+| Due Date/Time | Activities: Sessions 2, 4, 6 & 8 (in class). Individual journal: one entry after each activity session via Canvas/Turnitin. | |
+
+| Assessment Description | In groups of 3, students complete short applied ML/DL activities in Sessions 2, 4, 6 and 8. After each activity, each student individually submits a reflective learning journal entry using the 4R/5R framework. The journal focuses on the student's own learning and contribution and is not a rating of other group members. A1 is progressive and formative feedback is provided during the teaching period. | |
+
+| Detailed Submission Requirements | Group: complete the in-class activity and submit the group output as instructed. Individual: after each activity session, submit a 250-word (±10%) 4R/5R journal entry: Report -> Respond -> Relate -> Reason -> Reconstruct. Use a separate Canvas/Turnitin submission point for each entry. Where academic sources are used, at least 60% of references must be sourced through ASA ProQuest, with DOI links where available (or stable ProQuest links where no DOI exists). General websites are not accepted as academic sources. Apply APA 7th edition referencing. | |
+
+| Misconduct | The assessment will be submitted through Turnitin via your unit page on Canvas. Turnitin is plagiarism software, which will identify if you have copied information and included it in your assessment. Copying information from others (i.e. websites, partner company information, or other students etc.) without acknowledging the author is classified as misconduct. Engaging someone else to write any part of your assessment for you outside of the group work arrangement is classified as misconduct. To avoid being charged with Misconduct, students need to submit their own work and apply APA 7th edition referencing (ask your lecturer if you do not know what this means, or you need assistance applying it). The ASA misconduct policy and procedure can be read on the ASA website (https://asahe.edu.au/policies-and-forms/). Use the ASA referencing guide accessible via Library and Learning Support Page on Canvas. |
+
+| Late Submission | Any assessment submitted past the specific due date and time will be classified as Late. |
+| | |
+| | Any Late submission will be subject to a reduction of the mark allocated for the assessment item by 5% per day (or part thereof) of the total marks available for the assessment item. A 'day' for this purpose is defined as any day of the week including weekends. Assignments submitted later than one (1) week after the due date will not be accepted unless special consideration is approved as per the formal process. |
+
+| Special consideration | Students whose ability to submit or attend an assessment item is affected by sickness, misadventure, or other circumstances beyond their control, may be eligible for special consideration. No consideration is given when the condition or event is unrelated to the student's performance in a component of the assessment, or when it is considered not to be serious. |
+| | |
+| | Students applying for special consideration must submit the form within 3 days of the due date of the assessment item or exam. |
+| | |
+| | The form can be obtained from the ASA website (https://asahe.edu.au/policies-and-forms/) or on-campus at Reception. |
+| | |
+| | The request form must be submitted to Student Services. Supporting evidence should be attached. For further information please refer to the Student Assessment Policy and associated Procedure available on (https://asahe.edu.au/policies-and-forms/). |
+
+Assessment 1 – Marking Rubric
+
+Group activities 10% + Individual reflective journal 20% = 30% weighting
+
+ Assessment ULOs Marking Criteria IHD (100) HD (90) D (80) C (70) P (60) F (25) Fzero (0)
+
+ ULO 1, 2 Applied ML/DL activity - group output (10 marks) Exceptional, technically sophisticated and fully justified output; flawless execution and insight. Excellent, accurate output with strong technical choices and justification. Very good output; technically sound with only minor gaps. Sound output meeting requirements with some errors or limitations. Basic but adequate output meeting minimum requirements. Incomplete or substantially incorrect output with insufficient technical justification. No meaningful group output or assessable evidence.
+
+ ULO 3, 4, 5 Reflective journal - depth, learning and application using 4R/5R (15 marks) Exceptional critical reflection across all 4R/5R stages; sophisticated links to theory, self-awareness and future application. Consistently critical and insightful reflection with strong links to unit concepts and clear reconstruction. Thoughtful reflection covering the stages with good analysis and links to concepts. Sound reflection with some analysis and relevant learning, though partly descriptive. Basic reflection meeting minimum requirements; mostly descriptive with limited analysis. Little genuine reflection; weak/missing stages or insufficient links to learning and theory. No meaningful reflection or assessable evidence.
+
+ ULO 5 Individual contribution and professional communication (5 marks) Exceptional critical evaluation of own contribution; highly professional, precise communication. Clearly evaluates own contribution with excellent professional communication. Evaluates own contribution well; clear and professional writing. Describes and evaluates contribution adequately; generally clear communication. Basic account of own contribution with limited evaluation but adequate communication. Own contribution unclear, unsupported or poorly communicated. No meaningful evidence of own contribution or communication.
+
+| Unit | MAI600 Advanced Machine and Deep Learning Applications | |
+
+| Assessment Type | Individual Knowledge Quiz | |
+
+| Assessment Number | 2 | |
+
+| Assessment Weighting | 20% - Individual | |
+
+| Alignment with Unit and Course | Unit Learning Outcomes | Graduate Attributes Assessed |
+
+| Alignment with Unit and Course | ULO 1 | GA 1: Discipline Knowledge |
+
+| | ULO 3 | GA 2: Analytical Thinking and Complex Problem-solving |
+
+| | ULO 5 | GA 3: Digital Literacy |
+
+| Due Date/Time | Session 7 - in class | |
+
+| Assessment Description | A timed individual quiz of 20 multiple-choice questions assessing machine- and deep-learning content covered in Sessions 1-6. | |
+
+| Detailed Submission Requirements | Complete all 20 multiple-choice questions individually within the time limit on the online quiz platform announced in class. The quiz is submitted and marked automatically. No separate Word document, reference list or Turnitin submission is required. | |
+
+| Misconduct | The assessment will be submitted through Turnitin via your unit page on Canvas. Turnitin is plagiarism software, which will identify if you have copied information and included it in your assessment. Copying information from others (i.e. websites, partner company information, or other students etc.) without acknowledging the author is classified as misconduct. Engaging someone else to write any part of your assessment for you outside of the group work arrangement is classified as misconduct. To avoid being charged with Misconduct, students need to submit their own work and apply APA 7th edition referencing (ask your lecturer if you do not know what this means, or you need assistance applying it). The ASA misconduct policy and procedure can be read on the ASA website (https://asahe.edu.au/policies-and-forms/). Use the ASA referencing guide accessible via Library and Learning Support Page on Canvas. |
+
+| Late Submission | Any assessment submitted past the specific due date and time will be classified as Late. |
+| | |
+| | Any Late submission will be subject to a reduction of the mark allocated for the assessment item by 5% per day (or part thereof) of the total marks available for the assessment item. A 'day' for this purpose is defined as any day of the week including weekends. Assignments submitted later than one (1) week after the due date will not be accepted unless special consideration is approved as per the formal process. |
+
+| Special consideration | Students whose ability to submit or attend an assessment item is affected by sickness, misadventure, or other circumstances beyond their control, may be eligible for special consideration. No consideration is given when the condition or event is unrelated to the student's performance in a component of the assessment, or when it is considered not to be serious. |
+| | |
+| | Students applying for special consideration must submit the form within 3 days of the due date of the assessment item or exam. |
+| | |
+| | The form can be obtained from the ASA website (https://asahe.edu.au/policies-and-forms/) or on-campus at Reception. |
+| | |
+| | The request form must be submitted to Student Services. Supporting evidence should be attached. For further information please refer to the Student Assessment Policy and associated Procedure available on (https://asahe.edu.au/policies-and-forms/). |
+
+ Assessment 2 – Marking Rubric
+
+ Individual assessment - 20% weighting
+
+ Assessment ULOs Marking Criteria IHD (100) HD (90) D (80) C (70) P (60) F (25) Fzero (0)
+
+ ULO 1, 3, 5 Automated quiz score (20 marks) 20 correct. 18-19 correct. 16-17 correct. 14-15 correct. 10-13 correct. 1-9 correct. 0 correct / no attempt.
+
+| Unit | MAI600 Advanced Machine and Deep Learning Applications | |
+
+| Assessment Type | Applied Deep Learning Project + Individual Critical Reflection | |
+
+| Assessment Number | 3 | |
+
+| Assessment Weighting | 40% total - Group project/report 25% + Individual critical reflection 15% | |
+
+| Alignment with Unit and Course | Unit Learning Outcomes | Graduate Attributes Assessed |
+
+| Alignment with Unit and Course | ULO 1: Evaluate and select appropriate deep learning architectures and techniques to address complex real-world problems. | GA 1: Discipline Knowledge |
+
+| | ULO 2: Implement, train and optimise state-of-the-art deep learning models using industry tools and advanced techniques. | GA 2: Analytical Thinking and Complex Problem-solving |
+
+| | ULO 3: Analyse and interpret deep learning model behaviour using interpretability, explainability and uncertainty techniques, addressing ethics and bias. | GA 3: Digital Literacy |
+
+| | ULO 4: Critically evaluate cutting-edge ML/DL research and apply findings to develop innovative solutions. | GA 4: Communication |
+
+| | ULO 5: Effectively communicate complex ML/DL concepts, methods and findings through reports, presentations and visualisations. | GA 5: Lifelong Learning |
+
+| | | GA 6: Professional Skills |
+
+| | | GA 7: Intercultural and Ethical Sensitivity |
+
+| | | GA 8: Teamwork, Collaboration and Leadership |
+
+| Due Date/Time | Week 6, Thursday 11:59pm - group report and individual reflection | |
+
+| Assessment Description | Groups of 3 design, implement and critically evaluate a deep-learning solution for a real-world problem. The group submits a professional report. Each student separately submits an individual 4R/5R critical reflection on their own contribution, learning and teamwork. | |
+
+| Detailed Submission Requirements | GROUP (25%): submit a 3,000-word (±10%) report structured with Introduction (not Executive Summary), Problem & Data, Model & Training, Evaluation & Interpretability, Ethics & Bias, Deployment, and Conclusion & Recommendations, together with code/notebook. INDIVIDUAL (15%): submit an 800-word (±10%) 4R/5R critical reflection addressing your contribution and responsibilities; teamwork, communication and decision-making; a meaningful challenge and problem-solving; strengths/limitations; alternative approaches; learning; and future professional application. Integrate relevant academic literature/theory. Minimum 10 academic references for the project. At least 60% of references must be sourced through ASA ProQuest, with DOI links where available (or stable ProQuest links where no DOI exists). General websites are not accepted as academic sources. Apply APA 7th edition referencing. | |
+
+| Misconduct | The assessment will be submitted through Turnitin via your unit page on Canvas. Turnitin is plagiarism software, which will identify if you have copied information and included it in your assessment. Copying information from others (i.e. websites, partner company information, or other students etc.) without acknowledging the author is classified as misconduct. Engaging someone else to write any part of your assessment for you outside of the group work arrangement is classified as misconduct. To avoid being charged with Misconduct, students need to submit their own work and apply APA 7th edition referencing (ask your lecturer if you do not know what this means, or you need assistance applying it). The ASA misconduct policy and procedure can be read on the ASA website (https://asahe.edu.au/policies-and-forms/). Use the ASA referencing guide accessible via Library and Learning Support Page on Canvas. |
+
+| Late Submission | Any assessment submitted past the specific due date and time will be classified as Late. |
+| | |
+| | Any Late submission will be subject to a reduction of the mark allocated for the assessment item by 5% per day (or part thereof) of the total marks available for the assessment item. A 'day' for this purpose is defined as any day of the week including weekends. Assignments submitted later than one (1) week after the due date will not be accepted unless special consideration is approved as per the formal process. |
+
+| Special consideration | Students whose ability to submit or attend an assessment item is affected by sickness, misadventure, or other circumstances beyond their control, may be eligible for special consideration. No consideration is given when the condition or event is unrelated to the student's performance in a component of the assessment, or when it is considered not to be serious. |
+| | |
+| | Students applying for special consideration must submit the form within 3 days of the due date of the assessment item or exam. |
+| | |
+| | The form can be obtained from the ASA website (https://asahe.edu.au/policies-and-forms/) or on-campus at Reception. |
+| | |
+| | The request form must be submitted to Student Services. Supporting evidence should be attached. For further information please refer to the Student Assessment Policy and associated Procedure available on (https://asahe.edu.au/policies-and-forms/). |
+
+ Assessment 3 – Marking Rubric
+
+ Group project/report 25% + Individual critical reflection 15% = 40% weighting
+
+ Assessment ULOs Marking Criteria IHD (100) HD (90) D (80) C (70) P (60) F (25) Fzero (0)
+
+ ULO 1, 2 GROUP COMPONENT - DL solution: design & implementation (10 marks) Exceptional, sophisticated architecture; flawless implementation/training and compelling technical justification. Excellent architecture correctly implemented/trained with strong justification. Very good architecture and implementation with only minor gaps. Sound working solution with reasonable justification and some limitations. Basic working solution meeting minimum requirements with evident issues. Solution substantially incomplete, incorrect or non-functional. No meaningful solution or assessable evidence.
+
+ ULO 2, 3 GROUP COMPONENT - Evaluation, interpretability & ethics (10 marks) Exceptional rigorous evaluation against baselines; sophisticated interpretability and ethics/bias analysis. Rigorous evaluation with insightful interpretability and ethics/bias analysis. Strong evaluation and clear interpretability/ethics discussion. Adequate evaluation with relevant interpretability and ethics coverage. Basic evaluation with limited interpretability/ethics analysis. Little meaningful evaluation; ethics/interpretability substantially inadequate. No meaningful evidence for this criterion.
+
+ ULO 4, 5 GROUP COMPONENT - Report quality, research use & communication (5 marks) Exceptional, publication-quality communication; outstanding synthesis of high-quality research and flawless APA 7. Excellent, well-structured report with strong ProQuest research and accurate APA 7. Very good report with appropriate research and mostly accurate referencing. Sound report with adequate research and generally correct referencing. Basic but acceptable report; limited research depth and some referencing issues. Poorly structured; insufficient/non-academic research or major referencing problems. No meaningful report or assessable evidence.
+
+ ULO 3, 4, 5 INDIVIDUAL COMPONENT - Critical reflection: contribution, learning, teamwork and future application using 4R/5R (15 marks) Exceptional critical self-evaluation across all 4R/5R stages; sophisticated integration of theory, challenges, alternatives, teamwork and future professional application. Critical and insightful reflection across all stages with strong links to theory, contribution, collaboration and future application. Thoughtful critical reflection with good analysis of contribution, learning, teamwork, challenges and future application. Sound reflection with some critical analysis; relevant learning and future application, though partly descriptive. Basic reflection meeting minimum requirements; mostly descriptive with limited critical analysis or theory integration. Little genuine reflection; superficial/unsupported discussion of contribution, learning or teamwork. No meaningful individual reflection or assessable evidence.
+
+| Unit | MAI600 Advanced Machine and Deep Learning Applications | |
+
+| Assessment Type | Individual Reflection on Professional Practice | |
+
+| Assessment Number | 4 | |
+
+| Assessment Weighting | 10% - Individual | |
+
+| Alignment with Unit and Course | Unit Learning Outcomes | Graduate Attributes Assessed |
+
+| Alignment with Unit and Course | ULO 1 | GA 1: Discipline Knowledge |
+
+| | ULO 4 | GA 4: Communication |
+
+| | ULO 5 | GA 5: Lifelong Learning |
+
+| | | GA 6: Professional Skills |
+
+| Due Date/Time | Week 8, Thursday 11:59pm | |
+
+| Assessment Description | Each student submits an individual reflective report on learning across the unit and its application to professional machine- and deep-learning engineering practice. The task uses the 4R/5R framework and must move beyond description to critical reflection. | |
+
+| Detailed Submission Requirements | Submit an 800-word (±10%) individual critical reflection using 4R/5R (Report -> Respond -> Relate -> Reason -> Reconstruct). Address key learning across the unit; how it applies to a real ML/DL engineering role; a meaningful challenge and how you addressed it; strengths and areas for improvement; alternative approaches; and what you will do differently and apply in future professional practice. Integrate relevant academic literature/theory. At least 60% of references must be sourced through ASA ProQuest, with DOI links where available (or stable ProQuest links where no DOI exists). General websites are not accepted as academic sources. Apply APA 7th edition referencing. | |
+
+| Misconduct | The assessment will be submitted through Turnitin via your unit page on Canvas. Turnitin is plagiarism software, which will identify if you have copied information and included it in your assessment. Copying information from others (i.e. websites, partner company information, or other students etc.) without acknowledging the author is classified as misconduct. Engaging someone else to write any part of your assessment for you outside of the group work arrangement is classified as misconduct. To avoid being charged with Misconduct, students need to submit their own work and apply APA 7th edition referencing (ask your lecturer if you do not know what this means, or you need assistance applying it). The ASA misconduct policy and procedure can be read on the ASA website (https://asahe.edu.au/policies-and-forms/). Use the ASA referencing guide accessible via Library and Learning Support Page on Canvas. |
+
+| Late Submission | Any assessment submitted past the specific due date and time will be classified as Late. |
+| | |
+| | Any Late submission will be subject to a reduction of the mark allocated for the assessment item by 5% per day (or part thereof) of the total marks available for the assessment item. A 'day' for this purpose is defined as any day of the week including weekends. Assignments submitted later than one (1) week after the due date will not be accepted unless special consideration is approved as per the formal process. |
+
+| Special consideration | Students whose ability to submit or attend an assessment item is affected by sickness, misadventure, or other circumstances beyond their control, may be eligible for special consideration. No consideration is given when the condition or event is unrelated to the student's performance in a component of the assessment, or when it is considered not to be serious. |
+| | |
+| | Students applying for special consideration must submit the form within 3 days of the due date of the assessment item or exam. |
+| | |
+| | The form can be obtained from the ASA website (https://asahe.edu.au/policies-and-forms/) or on-campus at Reception. |
+| | |
+| | The request form must be submitted to Student Services. Supporting evidence should be attached. For further information please refer to the Student Assessment Policy and associated Procedure available on (https://asahe.edu.au/policies-and-forms/). |
+
+ Assessment 4 – Marking Rubric
+
+ Individual assessment - 10% weighting
+
+ Assessment ULOs Marking Criteria IHD (100) HD (90) D (80) C (70) P (60) F (25) Fzero (0)
+
+ ULO 1, 4 Critical reflection on learning and application of unit knowledge (5 marks) Exceptional, deeply critical reflection demonstrating sophisticated integration of unit knowledge with professional ML/DL practice. Insightful critical reflection with strong links between learning and professional practice. Thoughtful reflection with clear analysis and good links to practice. Sound reflection with some analysis and relevant links to practice. Basic reflection meeting minimum requirements; mostly descriptive with limited analysis. Little genuine reflection or weak connection to unit learning/professional practice. No meaningful reflection or assessable evidence.
+
+ ULO 4, 5 Future professional application, self-awareness and communication (5 marks) Exceptional self-awareness; sophisticated, specific future strategies; polished professional communication supported by literature. Excellent self-awareness and clear, well-justified future application; highly professional communication. Very good future application and self-awareness; clear professional communication. Reasonable future strategies and self-awareness; generally clear communication. Basic future application with limited self-awareness but adequate communication. Future application unclear; limited self-awareness or poor communication. No meaningful evidence for this criterion.
