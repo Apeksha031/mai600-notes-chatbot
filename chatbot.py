@@ -15,7 +15,7 @@ from groq import Groq
 from rag import NotesIndex, build_system_prompt, read_file, split_into_chunks
 
 NOTES_FILE = os.getenv("NOTES_FILE", "MAI600_Course_Notes.txt")  # .txt, .md, .docx or .pdf
-MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
+MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 
 
 def main():

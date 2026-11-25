@@ -64,7 +64,7 @@ A browser tab opens at http://localhost:8501.
 
 ## Troubleshooting
 - **"model ... has been decommissioned" or "model not found"**: Groq retires models now and then. Pick a current one from
-  https://console.groq.com/docs/models and set it, e.g. `export GROQ_MODEL="openai/gpt-oss-120b"`.
+  https://console.groq.com/docs/models and set it, e.g. `export GROQ_MODEL="openai/gpt-oss-20b"`.
 - **"rate limit" / "request too large"**: the free tier limits tokens per minute. The bot only sends the 5 most relevant sections; lower `TOP_K` in `app.py` if you still hit it.
 - **"Could not find the notes file"**: check the file name and that it's in the same folder, or set `NOTES_FILE` to its full path.
 

@@ -12,7 +12,7 @@ from groq import Groq
 
 from rag import NOT_FOUND, NotesIndex, build_system_prompt, read_file, split_into_chunks
 
-MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")  # see console.groq.com/docs/models
+MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")  # see console.groq.com/docs/models
 NOTES_FILES = ["MAI600_Course_Notes.txt"]  # notes bundled with the app
 TOP_K = 5             # how many note chunks to send with each question
 MAX_PER_MINUTE = 8    # questions per visitor per minute (protects your free Groq quota)
@@ -47,10 +47,12 @@ def build_index(files):
 
 def load_notes():
     files = []
-    for path in NOTES_FILES:
+    here = os.path.dirname(os.path.abspath(__file__))
+    for name in NOTES_FILES:
+        path = os.path.join(here, name)
         if os.path.exists(path):
             with open(path, encoding="utf-8", errors="ignore") as f:
-                files.append((path, f.read()))
+                files.append((name, f.read()))
     uploads = st.sidebar.file_uploader(
         "Add notes (.txt, .md, .docx, .pdf)", type=["txt", "md", "docx", "pdf"],
         accept_multiple_files=True,
@@ -160,7 +162,7 @@ if question:
                 answer = f"Sorry, something went wrong talking to Groq: {e}"
                 st.error(answer)
                 sources = []
-            if NOT_FOUND.split(".")[0] in answer:
+            if "don't know" in answer.lower() or "isn't covered" in answer.lower():
                 sources = []  # nothing relevant, so don't show sources
             if sources:
                 show_sources(sources)
