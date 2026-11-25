@@ -3,13 +3,21 @@
 A small chatbot that answers questions **only** from `MAI600_Course_Notes.txt`.
 If the notes don't cover something, it says it doesn't know instead of making something up.
 
-It works by finding the parts of the notes that match your question and sending only those, with your question,
-to a fast open model hosted on Groq.
+## Features
+- **Smart search (RAG):** the notes are split into small sections. For each question the bot finds the best sections
+  by keyword (BM25) *and* by meaning (embeddings, `BAAI/bge-small-en-v1.5`), then sends only those to the model.
+- **Cited answers:** answers cite their sources like [1], and a "Sources" box shows the exact text used.
+- **Streaming:** answers appear word by word.
+- **Honest:** if the notes don't cover it, the bot says "I don't know" instead of making something up.
+- **Extras:** starter questions, clear chat, upload extra notes (.txt, .md, .docx, .pdf), and a limit of
+  8 questions per minute per visitor to protect your free Groq quota.
 
 ## Files
-- `chatbot.py`: terminal version (simplest)
-- `app.py`: web chat page (Streamlit), lets you upload the notes in the browser
-- `requirements.txt`: the two Python packages needed
+- `app.py`: the web chat page (Streamlit)
+- `rag.py`: reading files, splitting notes into sections, and searching them
+- `chatbot.py`: terminal version
+- `MAI600_Course_Notes.txt`: the notes the bot answers from
+- `requirements.txt`: Python packages needed
 
 ## Step 1: Get a Groq API key
 1. Go to https://console.groq.com and sign in.
@@ -57,7 +65,7 @@ A browser tab opens at http://localhost:8501.
 ## Troubleshooting
 - **"model ... has been decommissioned" or "model not found"**: Groq retires models now and then. Pick a current one from
   https://console.groq.com/docs/models and set it, e.g. `export GROQ_MODEL="openai/gpt-oss-120b"`.
-- **"rate limit" / "request too large"**: the free tier limits tokens per minute. The bot only sends the 5 most relevant pieces of the notes; lower `TOP_CHUNKS` in `chatbot.py` if you still hit it.
+- **"rate limit" / "request too large"**: the free tier limits tokens per minute. The bot only sends the 5 most relevant sections; lower `TOP_K` in `app.py` if you still hit it.
 - **"Could not find the notes file"**: check the file name and that it's in the same folder, or set `NOTES_FILE` to its full path.
 
 ## Put it online (Streamlit Community Cloud, free)

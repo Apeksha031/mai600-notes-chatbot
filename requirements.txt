@@ -1,2 +1,7 @@
 groq
 streamlit
+numpy
+rank_bm25
+fastembed
+python-docx
+pypdf
