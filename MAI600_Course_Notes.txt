@@ -1,0 +1,40 @@
+MAI600 Course Notes (SAMPLE)
+NOTE: These are sample notes written for testing the chatbot. Replace this file with the official MAI600_Course_Notes.txt from Canvas when you have it.
+
+Week 1: What is Artificial Intelligence?
+Artificial Intelligence (AI) is the field of building computer systems that perform tasks that normally need human intelligence, such as understanding language, recognising images, making decisions and solving problems.
+Narrow AI is designed for one specific task (for example, a spam filter or a chess program). General AI would be able to perform any intellectual task a human can; it does not exist yet.
+
+Week 2: Machine Learning Basics
+Machine learning (ML) is a branch of AI where computers learn patterns from data instead of following hand-written rules.
+There are three main types of machine learning:
+
+1. Supervised learning
+Supervised learning trains a model on labeled data, meaning every training example comes with the correct answer (the label). The model learns to map inputs to outputs so it can predict labels for new, unseen data.
+Two common supervised tasks are:
+- Classification: predicting a category, e.g. whether an email is spam or not spam.
+- Regression: predicting a number, e.g. the price of a house.
+Common algorithms include linear regression, logistic regression, decision trees, and neural networks.
+
+2. Unsupervised learning
+Unsupervised learning uses unlabeled data. The model looks for hidden structure on its own.
+Examples: clustering (grouping similar customers) and dimensionality reduction (simplifying data while keeping important information). A common algorithm is k-means clustering.
+
+3. Reinforcement learning
+In reinforcement learning, an agent learns by interacting with an environment. It receives rewards for good actions and penalties for bad ones, and learns a strategy (policy) that maximises total reward. Examples include game-playing AI and robot control.
+
+Week 3: Training and Evaluating Models
+Data is usually split into a training set (to learn from) and a test set (to check performance on unseen data).
+Overfitting happens when a model memorises the training data and performs poorly on new data. Underfitting happens when a model is too simple to capture the pattern.
+Common evaluation metrics: accuracy, precision, recall and F1 score for classification; mean squared error for regression.
+
+Week 4: Neural Networks and Deep Learning
+A neural network is made of layers of connected nodes (neurons). Each connection has a weight that is adjusted during training using an algorithm called backpropagation.
+Deep learning uses neural networks with many layers and is behind modern image recognition and language models.
+
+Week 5: Large Language Models and Chatbots
+Large language models (LLMs) are trained on huge amounts of text to predict the next word. They power chatbots such as the one built in this course.
+Retrieval-augmented generation (RAG) gives a chatbot access to specific documents so it answers from those documents instead of only its general training. This reduces hallucinations, which are confident but made-up answers.
+
+Week 6: AI Ethics
+Key ethical issues include bias in training data, privacy, transparency (explaining how a model decides), and accountability for AI decisions.
