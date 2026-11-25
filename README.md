@@ -3,7 +3,7 @@
 A small chatbot that answers questions **only** from `MAI600_Course_Notes.txt`.
 If the notes don't cover something, it says it doesn't know instead of making something up.
 
-It works by pasting the whole notes file into the model's instructions, then sending your question
+It works by finding the parts of the notes that match your question and sending only those, with your question,
 to a fast open model hosted on Groq.
 
 ## Files
@@ -56,9 +56,8 @@ A browser tab opens at http://localhost:8501.
 
 ## Troubleshooting
 - **"model ... has been decommissioned" or "model not found"**: Groq retires models now and then. Pick a current one from
-  https://console.groq.com/docs/models and set it, e.g. `export GROQ_MODEL="llama-3.1-8b-instant"`.
-- **"rate limit" / "request too large"**: the free tier limits tokens per minute. If your notes are very long, wait a minute
-  and retry, or try a different model.
+  https://console.groq.com/docs/models and set it, e.g. `export GROQ_MODEL="openai/gpt-oss-120b"`.
+- **"rate limit" / "request too large"**: the free tier limits tokens per minute. The bot only sends the 5 most relevant pieces of the notes; lower `TOP_CHUNKS` in `chatbot.py` if you still hit it.
 - **"Could not find the notes file"**: check the file name and that it's in the same folder, or set `NOTES_FILE` to its full path.
 
 ## Put it online (Streamlit Community Cloud, free)

@@ -8,7 +8,7 @@ import os
 import streamlit as st
 from groq import Groq
 
-from chatbot import MODEL, NOTES_FILE, build_system_prompt
+from chatbot import MODEL, NOTES_FILE, build_system_prompt, find_relevant, split_into_chunks
 
 st.set_page_config(page_title="MAI600 Notes Chatbot", page_icon="📘")
 st.title("📘 MAI600 Notes Chatbot")
@@ -45,7 +45,7 @@ if not notes:
 st.sidebar.success(f"Notes loaded ({len(notes):,} characters)")
 
 client = Groq(api_key=api_key)
-system_prompt = build_system_prompt(notes)
+chunks = split_into_chunks(notes)
 
 if "history" not in st.session_state:
     st.session_state.history = []
@@ -56,7 +56,7 @@ for msg in st.session_state.history:
 
 if question := st.chat_input("Ask about the MAI600 notes..."):
     st.chat_message("user").write(question)
-    messages = [{"role": "system", "content": system_prompt}]
+    messages = [{"role": "system", "content": build_system_prompt(find_relevant(question, chunks))}]
     messages += st.session_state.history[-6:]
     messages.append({"role": "user", "content": question})
 
